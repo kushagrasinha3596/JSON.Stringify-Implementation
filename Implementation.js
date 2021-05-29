@@ -14,6 +14,7 @@ var obj = {
 function myStringify(obj){
     var resObj;
     if(Object.prototype.toString.call(obj) === '[object Array]'){
+        //For array data
         resObj = `[`;
         for(var i=0; i< obj.length; i++){
             if(obj[i] === undefined){
@@ -37,6 +38,7 @@ function myStringify(obj){
         resObj += "]";
         return resObj;
     }else if(Object.prototype.toString.call(obj) === '[object Object]'){
+        //For object data
         resObj=`{`;
         var keysArray = Object.keys(obj);
         for(var i=0; i< keysArray.length; i++){
@@ -60,6 +62,9 @@ function myStringify(obj){
     }
     resObj += `}`;
     return resObj;
+    }else{
+        //For data other than array and object
+        return obj;
     }
 }
 
