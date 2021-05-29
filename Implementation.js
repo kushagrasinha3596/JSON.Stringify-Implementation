@@ -5,7 +5,7 @@ var obj = {
     lname: 'Sinha',
     address: {
         city: 'Patna',
-        district: 'Bihar',
+        state: 'Bihar',
         contact: [[1],[{name: 'AA'}],[{'contact':1111}]],
         dummyKey: [{test1: true}, {test2: false}]
     }
